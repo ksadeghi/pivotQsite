@@ -1,0 +1,99 @@
+
+/* AGGRESSIVE MOBILE OVERRIDE - Inline in HTML head */
+@media screen and (max-width: 920px) {
+  /* FORCE HIDE ALL DROPDOWNS AND SUBMENUS */
+  .block-header-item__dropdown,
+  .block-header-item__dropdown-area,
+  .block-header-item__mobile-dropdown-trigger,
+  .item-content__icon-container,
+  .item-content__icon-container-wrapper,
+  .burger.block-header__hamburger-menu,
+  [data-qa="builder-siteheader-btn-hamburger"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+  }
+  
+  /* FORCE SIMPLE MOBILE HEADER LAYOUT */
+  .block-header {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 15px !important;
+    background: #080a29 !important;
+  }
+  
+  /* TOP ROW: Logo and buttons */
+  .block-header-layout-mobile {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 15px !important;
+    width: 100% !important;
+  }
+  
+  .block-header__logo {
+    flex: 0 0 auto !important;
+    max-width: 150px !important;
+  }
+  
+  .block-header__button {
+    flex: 0 0 auto !important;
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+  }
+  
+  /* BOTTOM ROW: Simple horizontal navigation */
+  .block-header-layout-mobile__dropdown {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  .block-header__nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    width: 100% !important;
+  }
+  
+  /* SHOW ONLY MAIN NAV ITEMS */
+  .block-header__nav-links > .block-header-item {
+    display: block !important;
+    visibility: visible !important;
+    margin: 0 !important;
+    flex: 1 !important;
+    text-align: center !important;
+  }
+  
+  .block-header__nav-links > .block-header-item .item-content {
+    display: block !important;
+    visibility: visible !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 10px 5px !important;
+    font-size: 16px !important;
+    white-space: nowrap !important;
+    background: transparent !important;
+    border: none !important;
+    text-align: center !important;
+  }
+  
+  /* HIDE CONTACT FROM BOTTOM NAV (it's in top row) */
+  .block-header__nav-links > .block-header-item[data-qa*="contact"] {
+    display: none !important;
+  }
+}
