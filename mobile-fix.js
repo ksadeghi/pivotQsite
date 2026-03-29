@@ -14,7 +14,7 @@
         // 2. Add no-js class initially, remove when JS loads
         document.documentElement.classList.add('no-js');
         
-        // 3. Two-line mobile navigation setup (NO hamburger menu)
+        // 3. Simple mobile navigation setup - hide dropdowns, show main items only
         function initMobileMenu() {
             // Hide all hamburger buttons
             const hamburgerButtons = document.querySelectorAll('.burger.block-header__hamburger-menu, [data-qa="builder-siteheader-btn-hamburger"]');
@@ -25,7 +25,28 @@
                 }
             });
             
-            // Show mobile navigation as regular visible menu
+            // Hide all dropdown menus and submenus
+            const dropdowns = document.querySelectorAll('.block-header-item__dropdown, .block-header-item__dropdown-area');
+            dropdowns.forEach(function(dropdown) {
+                if (dropdown) {
+                    dropdown.style.display = 'none';
+                    dropdown.style.visibility = 'hidden';
+                    dropdown.style.height = '0';
+                    dropdown.style.overflow = 'hidden';
+                    dropdown.style.opacity = '0';
+                }
+            });
+            
+            // Hide dropdown arrows
+            const arrows = document.querySelectorAll('.item-content__icon-container, .item-content__icon-container-wrapper');
+            arrows.forEach(function(arrow) {
+                if (arrow) {
+                    arrow.style.display = 'none';
+                    arrow.style.visibility = 'hidden';
+                }
+            });
+            
+            // Show mobile navigation container
             const mobileDropdowns = document.querySelectorAll('.block-header-layout-mobile__dropdown');
             mobileDropdowns.forEach(function(dropdown) {
                 if (dropdown) {
@@ -37,10 +58,12 @@
                     dropdown.style.overflow = 'visible';
                     dropdown.style.position = 'static';
                     dropdown.style.background = 'transparent';
+                    dropdown.style.padding = '0';
+                    dropdown.style.margin = '0';
                 }
             });
             
-            // Ensure navigation links are visible and properly styled
+            // Style main navigation links horizontally
             const navLinks = document.querySelectorAll('.block-header__nav-links');
             navLinks.forEach(function(nav) {
                 if (nav) {
@@ -48,22 +71,43 @@
                     nav.style.flexDirection = 'row';
                     nav.style.justifyContent = 'center';
                     nav.style.alignItems = 'center';
-                    nav.style.gap = '20px';
-                    nav.style.flexWrap = 'wrap';
+                    nav.style.gap = '30px';
+                    nav.style.padding = '0';
+                    nav.style.margin = '0';
+                    nav.style.listStyle = 'none';
                 }
             });
             
-            // Style navigation items
-            const navItems = document.querySelectorAll('.block-header-item .item-content');
-            navItems.forEach(function(item) {
+            // Style only main navigation items (not dropdown items)
+            const mainNavItems = document.querySelectorAll('.block-header__nav-links > .block-header-item');
+            mainNavItems.forEach(function(item) {
                 if (item) {
                     item.style.display = 'block';
                     item.style.visibility = 'visible';
-                    item.style.color = '#fff';
-                    item.style.textDecoration = 'none';
-                    item.style.padding = '8px 12px';
-                    item.style.fontSize = '16px';
-                    item.style.whiteSpace = 'nowrap';
+                    item.style.margin = '0';
+                    
+                    // Style the link inside
+                    const link = item.querySelector('.item-content');
+                    if (link) {
+                        link.style.display = 'block';
+                        link.style.visibility = 'visible';
+                        link.style.color = '#fff';
+                        link.style.textDecoration = 'none';
+                        link.style.padding = '8px 12px';
+                        link.style.fontSize = '16px';
+                        link.style.whiteSpace = 'nowrap';
+                        link.style.background = 'transparent';
+                        link.style.border = 'none';
+                    }
+                }
+            });
+            
+            // Disable dropdown functionality
+            const dropdownTriggers = document.querySelectorAll('.block-header-item__mobile-dropdown-trigger');
+            dropdownTriggers.forEach(function(trigger) {
+                if (trigger) {
+                    trigger.style.display = 'none';
+                    trigger.disabled = true;
                 }
             });
         }

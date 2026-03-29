@@ -12,82 +12,82 @@
   }
 }
 
-/* 2. Two-line mobile navigation layout - NO hamburger menu */
+/* 2. Simple mobile navigation - show only main items */
 @media screen and (max-width: 920px) {
   /* Hide hamburger menu completely */
   .burger.block-header__hamburger-menu {
     display: none !important;
   }
   
-  /* Show mobile dropdown as regular navigation */
+  /* Force mobile header to be simple two-line layout */
+  .block-header {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 10px 16px !important;
+  }
+  
+  /* First line: Logo, Contact, Hello I'm Q */
+  .block-header-layout-mobile {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .block-header__logo {
+    flex: 0 0 auto !important;
+  }
+  
+  .block-header__button {
+    flex: 0 0 auto !important;
+    margin-left: 10px !important;
+  }
+  
+  /* Second line: Simple horizontal navigation */
   .block-header-layout-mobile__dropdown {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-    max-height: none !important;
-    height: auto !important;
-    overflow: visible !important;
     position: static !important;
     background: transparent !important;
-    padding: 10px 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
   
-  /* Two-line layout for mobile header */
-  .block-header-layout-mobile {
-    display: grid !important;
-    grid-template-rows: auto auto !important;
-    grid-template-columns: 1fr auto auto !important;
-    grid-template-areas: 
-      "logo contact hello"
-      "nav nav nav" !important;
-    gap: 10px !important;
-    padding: 10px 16px !important;
-  }
-  
-  /* Position elements in grid */
-  .block-header__logo {
-    grid-area: logo !important;
-    justify-self: start !important;
-  }
-  
-  /* Contact link positioning */
-  .block-header-item:has([href*="contact"]) {
-    grid-area: contact !important;
-    justify-self: end !important;
-  }
-  
-  /* Hello I'm Q button positioning */
-  .block-header__button {
-    grid-area: hello !important;
-    justify-self: end !important;
-    margin-left: 10px !important;
-  }
-  
-  /* Navigation on second line */
-  .block-header-layout-mobile__dropdown {
-    grid-area: nav !important;
-  }
-  
-  /* Horizontal navigation layout */
+  /* Show only main navigation items horizontally */
   .block-header__nav-links {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 20px !important;
-    flex-wrap: wrap !important;
+    gap: 30px !important;
     padding: 0 !important;
     margin: 0 !important;
+    list-style: none !important;
   }
   
-  /* Navigation items styling */
-  .block-header-item {
+  /* Show only main navigation items (Home, About, Case Studies, Contact) */
+  .block-header__nav-links > .block-header-item {
     display: block !important;
     visibility: visible !important;
     margin: 0 !important;
   }
   
-  .item-content {
+  /* Hide all dropdown/submenu items */
+  .block-header-item__dropdown,
+  .block-header-item__dropdown-area {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+  
+  /* Style main navigation links */
+  .block-header__nav-links > .block-header-item > .item-content-wrapper > .item-content,
+  .block-header__nav-links > .block-header-item > .item-content {
     display: block !important;
     visibility: visible !important;
     color: #fff !important;
@@ -95,26 +95,19 @@
     padding: 8px 12px !important;
     font-size: 16px !important;
     white-space: nowrap !important;
-  }
-  
-  /* Dropdown menus for About and Case Studies */
-  .block-header-item__dropdown {
-    position: static !important;
-    display: block !important;
     background: transparent !important;
-    box-shadow: none !important;
-    margin-top: 5px !important;
+    border: none !important;
   }
   
-  .block-header-item__dropdown .block-header-item {
-    display: inline-block !important;
-    margin-right: 15px !important;
+  /* Hide dropdown arrows */
+  .item-content__icon-container,
+  .item-content__icon-container-wrapper {
+    display: none !important;
   }
   
-  .block-header-item__dropdown .item-content {
-    font-size: 14px !important;
-    padding: 5px 8px !important;
-    opacity: 0.9 !important;
+  /* Ensure Contact link is visible in top row */
+  .block-header-item[data-qa*="contact"] {
+    order: 999 !important;
   }
 }
 
