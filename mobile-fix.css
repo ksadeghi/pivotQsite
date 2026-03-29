@@ -14,6 +14,7 @@
 
 /* 2. Hamburger menu visibility fixes for mobile */
 @media screen and (max-width: 920px) {
+  /* Show hamburger menu button */
   .burger.block-header__hamburger-menu {
     display: block !important;
     visibility: visible !important;
@@ -32,28 +33,39 @@
     margin: 3px 0 !important;
   }
   
-  /* Force mobile dropdown to be visible when opened */
+  /* HIDE mobile dropdown by default */
+  .block-header-layout-mobile__dropdown {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    max-height: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+  
+  /* SHOW mobile dropdown only when opened */
   .block-header-layout-mobile__dropdown--open {
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
     max-height: none !important;
     height: auto !important;
+    overflow: visible !important;
   }
   
-  /* Ensure navigation items are visible */
-  .block-header__nav-links {
+  /* Navigation items styling when menu is open */
+  .block-header-layout-mobile__dropdown--open .block-header__nav-links {
     display: flex !important;
     flex-direction: column !important;
     visibility: visible !important;
   }
   
-  .block-header-item {
+  .block-header-layout-mobile__dropdown--open .block-header-item {
     display: block !important;
     visibility: visible !important;
   }
   
-  .item-content {
+  .block-header-layout-mobile__dropdown--open .item-content {
     display: block !important;
     visibility: visible !important;
     color: #fff !important;
@@ -119,17 +131,28 @@
 }
 
 /* 5. Fallback styles for when JavaScript fails */
-.no-js .block-header-layout-mobile__dropdown {
-  display: block !important;
-  position: static !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  height: auto !important;
-  max-height: none !important;
-}
+@media screen and (max-width: 920px) {
+  .no-js .block-header-layout-mobile__dropdown {
+    display: block !important;
+    position: static !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+  }
 
-.no-js .burger.block-header__hamburger-menu {
-  display: none !important;
+  .no-js .burger.block-header__hamburger-menu {
+    display: none !important;
+  }
+  
+  /* Hide menu by default, show hamburger */
+  .block-header-layout-mobile__dropdown {
+    display: none !important;
+  }
+  
+  .burger.block-header__hamburger-menu {
+    display: block !important;
+  }
 }
 
 /* 6. Force visibility for critical elements */

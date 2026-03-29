@@ -29,6 +29,15 @@
                     button.style.opacity = '1';
                     button.style.zIndex = '999';
                     
+                    // HIDE dropdown by default
+                    dropdown.classList.remove('block-header-layout-mobile__dropdown--open');
+                    dropdown.style.display = 'none';
+                    dropdown.style.visibility = 'hidden';
+                    dropdown.style.opacity = '0';
+                    dropdown.style.height = '0';
+                    dropdown.style.maxHeight = '0';
+                    dropdown.style.overflow = 'hidden';
+                    
                     // Add click handler
                     button.addEventListener('click', function(e) {
                         e.preventDefault();
@@ -40,23 +49,24 @@
                         const isOpen = dropdown.classList.contains('block-header-layout-mobile__dropdown--open');
                         
                         if (isOpen) {
+                            // Close menu
                             dropdown.classList.remove('block-header-layout-mobile__dropdown--open');
                             dropdown.style.display = 'none';
+                            dropdown.style.visibility = 'hidden';
+                            dropdown.style.opacity = '0';
+                            dropdown.style.height = '0';
+                            dropdown.style.maxHeight = '0';
+                            dropdown.style.overflow = 'hidden';
                         } else {
+                            // Open menu
                             dropdown.classList.add('block-header-layout-mobile__dropdown--open');
                             dropdown.style.display = 'flex';
                             dropdown.style.visibility = 'visible';
                             dropdown.style.opacity = '1';
                             dropdown.style.height = 'auto';
                             dropdown.style.maxHeight = 'none';
+                            dropdown.style.overflow = 'visible';
                         }
-                    });
-                    
-                    // Ensure dropdown navigation is visible
-                    const navLinks = dropdown.querySelectorAll('.block-header__nav-links, .item-content');
-                    navLinks.forEach(function(link) {
-                        link.style.display = 'block';
-                        link.style.visibility = 'visible';
                     });
                 }
             });
