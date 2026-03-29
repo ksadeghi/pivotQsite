@@ -1,0 +1,154 @@
+/* Mobile Safari Compatibility Fixes */
+
+/* 1. iOS Safari viewport fixes */
+@supports (-webkit-touch-callout: none) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* 2. Hamburger menu visibility fixes for mobile */
+@media screen and (max-width: 920px) {
+  .burger.block-header__hamburger-menu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 999 !important;
+    position: relative !important;
+  }
+  
+  .burger__bun,
+  .burger__meat {
+    display: block !important;
+    visibility: visible !important;
+    background-color: #fff !important;
+    height: 2px !important;
+    width: 20px !important;
+    margin: 3px 0 !important;
+  }
+  
+  /* Force mobile dropdown to be visible when opened */
+  .block-header-layout-mobile__dropdown--open {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+  
+  /* Ensure navigation items are visible */
+  .block-header__nav-links {
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+  }
+  
+  .block-header-item {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  .item-content {
+    display: block !important;
+    visibility: visible !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 10px !important;
+  }
+}
+
+/* 3. Force elements to be visible on mobile */
+@media screen and (max-width: 920px) {
+  .layout-element {
+    display: grid !important;
+    visibility: visible !important;
+  }
+  
+  .layout-element--layout {
+    display: grid !important;
+  }
+  
+  /* Ensure text elements are visible */
+  .text-box,
+  .grid-text-box {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  /* Ensure images are visible */
+  .image-wrapper,
+  .grid-image {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  /* Ensure buttons are visible */
+  .grid-button {
+    display: flex !important;
+    visibility: visible !important;
+  }
+}
+
+/* 4. iOS Safari specific fixes */
+@media screen and (max-width: 920px) {
+  /* Fix for iOS Safari 100vh issues */
+  .block-header-layout-mobile__dropdown--full-screen {
+    height: calc(100vh - 60px) !important;
+    min-height: calc(100vh - 60px) !important;
+  }
+  
+  /* Ensure proper touch targets */
+  button,
+  a,
+  .item-content {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    touch-action: manipulation !important;
+  }
+  
+  /* Fix for iOS Safari font rendering */
+  * {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
+}
+
+/* 5. Fallback styles for when JavaScript fails */
+.no-js .block-header-layout-mobile__dropdown {
+  display: block !important;
+  position: static !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+.no-js .burger.block-header__hamburger-menu {
+  display: none !important;
+}
+
+/* 6. Force visibility for critical elements */
+@media screen and (max-width: 920px) {
+  [data-v-06cc56f8],
+  [data-v-c1535ecd],
+  [data-v-f7e431f3],
+  [data-v-76d5a5f3] {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  .block-header {
+    display: grid !important;
+    visibility: visible !important;
+  }
+  
+  .block-header__nav {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
