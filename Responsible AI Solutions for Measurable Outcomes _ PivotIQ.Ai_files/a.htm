@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style>
+	html {
+		overflow: hidden;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+ 	}
+
+ 	iframe {
+ 		max-width: 100%;
+ 	}
+</style>
+</head>
+	<body><code></code><!-- Our Purpose, Mission, and Values — Left Title + Ferrari Red Streak (INLINE / tighter top / more left / mobile-friendly) -->
+<section style="
+  background:transparent !important;
+  width:100%;
+  padding:22px 12px 14px;              /* reduced top space */
+  box-sizing:border-box;
+  font-family:'DM Sans', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+">
+  <div style="
+    max-width:1120px;
+    margin:0 auto;
+    padding-left:0px;                   /* further left */
+  ">
+    <h1 style="
+      margin:0;
+      font-size:clamp(22px, 4.8vw, 30px); /* mobile-friendly scaling */
+      line-height:1.15;
+      letter-spacing:-0.02em;
+      color:rgba(255,255,255,.92);
+    ">
+      Our Purpose, Mission, and Values
+    </h1>
+
+    <!-- Ferrari red streak (inline so it ALWAYS shows) -->
+    <div style="
+      width:min(640px, 92vw);
+      height:4px;                       /* final professional thickness */
+      margin-top:10px;                  /* tighter spacing under title */
+      border-radius:999px;
+      background:linear-gradient(90deg, rgba(255,40,0,.98), rgba(255,40,0,.98), rgba(255,40,0,.38), rgba(255,40,0,0));
+      box-shadow:0 0 0 1px rgba(255,40,0,.10);
+    "></div>
+  </div>
+</section>
+
+<script>
+	const heightObserver = new ResizeObserver(([{ contentRect }]) => {
+		window.parent.postMessage({ action: 'iframeHeightUpdated', height: contentRect.height, id: 'zBe24B' }, '*');
+	});
+
+	heightObserver.observe(document.documentElement);
+</script>
+
+</body></html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style>
+	html {
+		overflow: hidden;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+ 	}
+
+ 	iframe {
+ 		max-width: 100%;
+ 	}
+</style>
+</head>
+	<body><code></code><!-- About Us — Title + Ferrari Red Streak (Inline fallback) -->
+<section style="background:transparent; width:100%; padding:52px 16px 26px; box-sizing:border-box; font-family:DM Sans, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; text-align:center;">
+  <h1 style="margin:0; font-size:34px; line-height:1.1; letter-spacing:-0.02em; color:rgba(255,255,255,.92);">About Us</h1>
+
+  <div style="display:block; width:min(560px, 92vw); height:4px; margin:16px auto 0; border-radius:999px;
+              background:linear-gradient(90deg, rgba(255,40,0,0), rgba(255,40,0,.95), rgba(255,40,0,.95), rgba(255,40,0,0));
+              box-shadow:0 0 0 1px rgba(255,40,0,.08);"></div>
+</section>
+
+<script>
+	const heightObserver = new ResizeObserver(([{ contentRect }]) => {
+		window.parent.postMessage({ action: 'iframeHeightUpdated', height: contentRect.height, id: 'zESo3R' }, '*');
+	});
+
+	heightObserver.observe(document.documentElement);
+</script>
+
+</body></html>

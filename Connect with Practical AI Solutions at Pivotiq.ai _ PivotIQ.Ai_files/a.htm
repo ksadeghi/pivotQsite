@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style>
+	html {
+		overflow: hidden;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+ 	}
+
+ 	iframe {
+ 		max-width: 100%;
+ 	}
+</style>
+<style>
+  .piv-contact-streak{
+    position: relative;
+    width: 100%;
+    padding: 18px 16px;              /* slim band (not thick) */
+    font-family: "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: transparent;
+  }
+  .piv-contact-streak *{ box-sizing: border-box; }
+
+  /* Cool streak background band (navy gradient + soft highlight streak) */
+  .piv-contact-streak::before{
+    content:"";
+    position:absolute;
+    inset: 0;
+    background:
+      /* diagonal “cool streak” highlight */
+      linear-gradient(110deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,.10) 42%,
+        rgba(255,255,255,0) 62%),
+      /* main band with faded edges */
+      linear-gradient(90deg,
+        rgba(10,31,68,0) 0%,
+        rgba(10,31,68,.96) 14%,
+        rgba(10,31,68,.96) 86%,
+        rgba(10,31,68,0) 100%);
+    filter: saturate(1.05);
+    pointer-events:none;
+  }
+
+  .piv-contact-streak__wrap{
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 6px;
+  }
+
+  .piv-contact-streak__h2{
+    margin: 0 !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.12 !important;
+    font-size: 28px !important;      /* DM Sans 28 */
+    color: #ffffff !important;       /* white text */
+    opacity: 1 !important;
+    text-wrap: balance;
+  }
+
+  /* ✅ Ferrari red streak (thin, premium, fades toward right — same style as your other titles) */
+  .piv-contact-streak__rule{
+    width: min(220px, 58vw);
+    height: 3px;
+    margin: 12px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg,
+      rgba(255,40,0,.95) 0%,
+      rgba(255,40,0,.65) 50%,
+      rgba(255,40,0,.20) 78%,
+      rgba(255,40,0,0) 100%);
+    box-shadow: 0 0 0 1px rgba(255,40,0,.14), 0 10px 22px rgba(255,40,0,.08);
+  }
+
+  /* Small phones */
+  @media (max-width: 360px){
+    .piv-contact-streak{ padding: 16px 14px; }
+    .piv-contact-streak__h2{ font-size: 26px !important; }
+    .piv-contact-streak__rule{ margin-top: 10px; }
+  }
+
+  /* Mobile landscape: tighter vertical space */
+  @media (max-width: 900px) and (orientation: landscape){
+    .piv-contact-streak{ padding: 14px 14px; }
+    .piv-contact-streak__rule{ margin-top: 10px; }
+  }
+</style></head>
+	<body><!-- PivotIQ.Ai — Contact Us Title (White Text, DM Sans 28, Cool Streak Separator, Ferrari Red Streak like “What Makes Us Different” / “Where We Deliver…”) -->
+
+
+<section class="piv-contact-streak" aria-label="Contact us">
+  <div class="piv-contact-streak__wrap">
+    <h2 class="piv-contact-streak__h2">Contact Us</h2>
+    <div class="piv-contact-streak__rule" aria-hidden="true"></div>
+  </div>
+</section>
+
+<script>
+	const heightObserver = new ResizeObserver(([{ contentRect }]) => {
+		window.parent.postMessage({ action: 'iframeHeightUpdated', height: contentRect.height, id: 'zUslPJ' }, '*');
+	});
+
+	heightObserver.observe(document.documentElement);
+</script>
+
+</body></html>

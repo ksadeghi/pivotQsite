@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style>
+	html {
+		overflow: hidden;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+ 	}
+
+ 	iframe {
+ 		max-width: 100%;
+ 	}
+</style>
+</head>
+	<body><code><!-- PivotQ.Ai — MOBILE ONLY Case Study Title (Center aligned, Slightly smaller on phones)
+     Use this ONLY on your mobile version/page/section.
+-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&display=swap');
+
+  .piv-cs-title-m{
+    --piv-red:#FF2800;
+    --piv-white: rgba(255,255,255,.96);
+    --piv-sub: rgba(255,255,255,.82);
+
+    background: transparent !important;
+    width: 100%;
+    padding: 26px max(14px, env(safe-area-inset-right))
+             28px max(14px, env(safe-area-inset-left));
+    font-family: "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+
+    /* ✅ show only on mobile */
+    display: block;
+  }
+  .piv-cs-title-m, .piv-cs-title-m *{ box-sizing:border-box; }
+
+  /* Hide on desktop/tablet */
+  @media (min-width: 821px){
+    .piv-cs-title-m{ display: none !important; }
+  }
+
+  .piv-cs-title-m__wrap{
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2px;
+  }
+
+  .piv-cs-title-m__h1{
+    margin: 0;
+    color: var(--piv-white);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+
+    /* ✅ slightly smaller for phones */
+    font-size: clamp(26px, 7.2vw, 36px);
+  }
+
+  .piv-cs-title-m__streak{
+    width: min(520px, 88vw);
+    height: 7px;
+    border-radius: 999px;
+    margin: 12px auto 0;
+    background: linear-gradient(90deg,
+      rgba(255,40,0,1) 0%,
+      rgba(255,40,0,.98) 18%,
+      rgba(255,40,0,.70) 52%,
+      rgba(255,40,0,.24) 80%,
+      rgba(255,40,0,0) 100%
+    );
+    filter: drop-shadow(0 10px 16px rgba(255,40,0,.18));
+  }
+
+  .piv-cs-title-m__sub{
+    margin: 12px auto 0;
+    color: var(--piv-sub);
+    font-weight: 600;
+    line-height: 1.35;
+
+    /* ✅ slightly smaller subtitle */
+    font-size: clamp(14px, 4.2vw, 17px);
+    max-width: 520px;
+  }
+</style>
+
+<section class="piv-cs-title-m" aria-label="Mateenik Case Study Title (Mobile)">
+  <div class="piv-cs-title-m__wrap">
+    <h1 class="piv-cs-title-m__h1">Mateenik Case Study</h1>
+    <div class="piv-cs-title-m__streak" aria-hidden="true"></div>
+    <p class="piv-cs-title-m__sub">AI Property management platform delivered by PivotQ.Ai</p>
+  </div>
+</section></code>
+<script>
+	const heightObserver = new ResizeObserver(([{ contentRect }]) => {
+		window.parent.postMessage({ action: 'iframeHeightUpdated', height: contentRect.height, id: 'zpVwUu' }, '*');
+	});
+
+	heightObserver.observe(document.documentElement);
+</script>
+
+</body></html>

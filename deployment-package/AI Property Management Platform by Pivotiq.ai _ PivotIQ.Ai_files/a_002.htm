@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style>
+	html {
+		overflow: hidden;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+ 	}
+
+ 	iframe {
+ 		max-width: 100%;
+ 	}
+</style>
+</head>
+	<body><code><link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="a_data_002/css2.css" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:#0A1F44;
+    --red:#FF2800;
+    --text:#374151;
+    --muted:#6B7280;
+    --line:#E5E7EB;
+    --soft:#F8FAFC;
+  }
+
+  .pivCase{
+    background:#fff;
+    color:var(--text);
+    font-family:"DM Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    line-height:1.55;
+  }
+
+  /* Desktop spacing (reduced) */
+  .pivCase .wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:28px 18px 24px;
+  }
+
+  .pivCase h2{
+    margin:20px 0 10px;
+    color:var(--navy);
+    font-size:22px;
+    line-height:1.25;
+    letter-spacing:-0.01em;
+  }
+  .pivCase h3{
+    margin:16px 0 8px;
+    color:var(--navy);
+    font-size:18px;
+    line-height:1.35;
+  }
+
+  .pivCase p{ margin:10px 0; font-size:16px; }
+
+  .pivCase .pivList{
+    margin:10px 0 12px 22px;
+    padding:0;
+    font-size:16px;
+  }
+  .pivCase .pivList li{ margin:6px 0; }
+
+  .pivCase h2 + p,
+  .pivCase h2 + ul,
+  .pivCase h2 + .tableWrap{
+    border-top:1px solid var(--line);
+    padding-top:12px;
+    margin-top:8px;
+  }
+
+  .pivCase .tableWrap{
+    margin:12px 0 14px;
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    background:#fff;
+  }
+
+  /* Desktop table */
+  .pivCase table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:820px;
+  }
+  .pivCase th{
+    text-align:left;
+    padding:12px 14px;
+    font-weight:700;
+    color:var(--navy);
+    border-bottom:1px solid var(--line);
+    background:var(--soft);
+    font-size:14px;
+  }
+  .pivCase td{
+    padding:12px 14px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    font-size:14px;
+    color:var(--text);
+  }
+  .pivCase tr:last-child td{ border-bottom:none; }
+
+  /* Mobile: stack rows as cards */
+  @media (max-width: 899px){
+    .pivCase .wrap{ padding:22px 14px 28px; }
+    .pivCase h2{ font-size:20px; }
+    .pivCase h3{ font-size:16px; }
+
+    .pivCase .tableWrap{ overflow:visible; }
+
+    .pivCase table,
+    .pivCase thead,
+    .pivCase tbody,
+    .pivCase th,
+    .pivCase tr,
+    .pivCase td{
+      display:block;
+      width:100%;
+      min-width:0;
+    }
+    .pivCase thead{ display:none; }
+
+    .pivCase tr{
+      border-bottom:1px solid var(--line);
+      padding:10px 0;
+    }
+    .pivCase tr:last-child{ border-bottom:none; }
+
+    .pivCase td{
+      border:none;
+      padding:6px 14px;
+      font-size:14px;
+    }
+    .pivCase td[data-label]::before{
+      content: attr(data-label);
+      display:block;
+      font-weight:700;
+      color:var(--navy);
+      margin-bottom:2px;
+      font-size:12px;
+    }
+  }
+
+  .pivCase .footer{
+    margin-top:18px;
+    padding-top:10px;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  .pivCase .wrap > *:last-child{ margin-bottom:0 !important; }
+</style>
+
+<section class="pivCase">
+  <main class="wrap">
+
+    <h2>Executive Snapshot</h2>
+    <p>PivotQ.Ai developed <strong>Mateenik</strong>—an AI-enabled 
+property management platform—for a client operating across multiple 
+properties and stakeholder groups. The goal was to reduce operational 
+overhead, improve response time and service quality, and provide 
+leadership-level visibility into portfolio health.</p>
+
+    <div class="tableWrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>Before</th>
+            <th>After</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Area"><strong>Administrative workload</strong></td>
+            <td data-label="Before">High volume of manual intake, follow-ups, and handoffs</td>
+            <td data-label="After"><span style="color:#FF2800;font-weight:800;">75%</span> reduction in administrative time (client-reported)</td>
+          </tr>
+          <tr>
+            <td data-label="Area"><strong>Issue resolution</strong></td>
+            <td data-label="Before">Delays driven by email chains and unclear routing</td>
+            <td data-label="After"><span style="color:#FF2800;font-weight:800;">90%</span> faster resolution via automated workflows (client-reported)</td>
+          </tr>
+          <tr>
+            <td data-label="Area"><strong>Collections &amp; cash flow</strong></td>
+            <td data-label="Before">Limited real-time insight into delinquencies and trends</td>
+            <td data-label="After"><span style="color:#FF2800;font-weight:800;">60%</span> improvement through better tracking and reminders (client-reported)</td>
+          </tr>
+          <tr>
+            <td data-label="Area"><strong>Tenant support coverage</strong></td>
+            <td data-label="Before">Business-hours availability, response delays during peaks</td>
+            <td data-label="After"><span style="color:#FF2800;font-weight:800;">24/7</span> support coverage through AI intake and routing (client-reported)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Context</h2>
+    <p>Property managers face a persistent operational burden: tenant 
+inquiries, maintenance coordination, delinquency tracking, and reporting
+ across multiple properties. These activities typically fragment across 
+tools and inboxes, creating delays, inconsistent service levels, and 
+limited visibility for leadership.</p>
+
+    <h2>Business challenges</h2>
+    <ul class="pivList">
+      <li>High administrative workload across tenant requests, maintenance tracking, and delinquency follow-up</li>
+      <li>Slow response cycles driven by email chains and unclear ownership</li>
+      <li>Limited real-time insight into vacancy, collections status, and operating expenses</li>
+      <li>Reactive management patterns that reduce time available for portfolio optimization</li>
+    </ul>
+
+    <h2>Approach</h2>
+    <p>PivotQ.Ai approached this as a connected operating system problem (not a set of point solutions). The platform was designed to:</p>
+    <ul class="pivList">
+      <li>Standardize intake and classification of tenant and maintenance requests</li>
+      <li>Route work to the right owner based on role, location, and severity</li>
+      <li>Provide real-time dashboards for portfolio performance and exceptions</li>
+      <li>Enable scalable operations via cloud-native architecture on AWS</li>
+    </ul>
+
+    <h2>Solution</h2>
+    <p>Mateenik is an AI-powered property management platform that 
+supports the full operational lifecycle across tenants, on-site 
+managers, owners, and administrators.</p>
+
+    <h3>Tenant &amp; support automation</h3>
+    <ul class="pivList">
+      <li>AI-assisted intake for tenant inquiries and service requests</li>
+      <li>Structured request capture for faster classification and routing</li>
+      <li>Always-on support coverage through automated intake workflows</li>
+    </ul>
+
+    <h3>Maintenance workflow management</h3>
+    <ul class="pivList">
+      <li>Automated work order creation and assignment</li>
+      <li>Rule-based routing by property, issue type, and urgency</li>
+      <li>Status tracking and closure workflows for accountability</li>
+    </ul>
+
+    <h3>Financial &amp; portfolio visibility</h3>
+    <ul class="pivList">
+      <li>Dashboards for vacancy, delinquencies, rent status, and operating expenses</li>
+      <li>Cash-flow and collections monitoring with reminders and alerts</li>
+      <li>Standard reporting for leadership review and operational governance</li>
+    </ul>
+
+    <h3>Core capabilities</h3>
+    <ul class="pivList">
+      <li>AWS-based architecture designed for scalability and reliability</li>
+      <li>AWS Bedrock integration for natural language understanding and assisted automation</li>
+      <li>Role-specific portals for tenants, owners, on-site managers, and administrators</li>
+      <li><strong>24/7</strong> coverage via automated intake and routing (operational capability)</li>
+    </ul>
+
+    <h2>Outcome</h2>
+    <p>Following rollout, the client reported measurable operational improvement:</p>
+    <ul class="pivList">
+      <li><strong>75%</strong> reduction in administrative time</li>
+      <li><strong>90%</strong> faster issue resolution</li>
+      <li><strong>60%</strong> improvement in collections-driven cash flow</li>
+      <li><strong>24/7</strong> tenant support coverage through automated intake and routing</li>
+    </ul>
+
+    <h2>Measurement note</h2>
+    <p>Outcomes reflect client-reported pre/post operational baselines following rollout.</p>
+
+    <h2>What this shows</h2>
+    <ul class="pivList">
+      <li>Cloud-native platform delivery that unifies workflows and analytics</li>
+      <li>Practical GenAI integration (Bedrock) applied to structured intake and routing</li>
+      <li>Measured operational impact with governance-ready reporting and visibility</li>
+      <li>Repeatable approach transferable across industries</li>
+    </ul>
+
+    <div class="footer">© PivotQ.Ai</div>
+  </main>
+</section></code>
+<script>
+	const heightObserver = new ResizeObserver(([{ contentRect }]) => {
+		window.parent.postMessage({ action: 'iframeHeightUpdated', height: contentRect.height, id: 'z-_tT1' }, '*');
+	});
+
+	heightObserver.observe(document.documentElement);
+</script>
+
+</body></html>
