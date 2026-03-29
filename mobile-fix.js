@@ -14,60 +14,56 @@
         // 2. Add no-js class initially, remove when JS loads
         document.documentElement.classList.add('no-js');
         
-        // 3. Hamburger menu fallback functionality
+        // 3. Two-line mobile navigation setup (NO hamburger menu)
         function initMobileMenu() {
+            // Hide all hamburger buttons
             const hamburgerButtons = document.querySelectorAll('.burger.block-header__hamburger-menu, [data-qa="builder-siteheader-btn-hamburger"]');
-            const mobileDropdowns = document.querySelectorAll('.block-header-layout-mobile__dropdown');
+            hamburgerButtons.forEach(function(button) {
+                if (button) {
+                    button.style.display = 'none';
+                    button.style.visibility = 'hidden';
+                }
+            });
             
-            hamburgerButtons.forEach(function(button, index) {
-                if (button && mobileDropdowns[index]) {
-                    const dropdown = mobileDropdowns[index];
-                    
-                    // Ensure button is visible
-                    button.style.display = 'block';
-                    button.style.visibility = 'visible';
-                    button.style.opacity = '1';
-                    button.style.zIndex = '999';
-                    
-                    // HIDE dropdown by default
-                    dropdown.classList.remove('block-header-layout-mobile__dropdown--open');
-                    dropdown.style.display = 'none';
-                    dropdown.style.visibility = 'hidden';
-                    dropdown.style.opacity = '0';
-                    dropdown.style.height = '0';
-                    dropdown.style.maxHeight = '0';
-                    dropdown.style.overflow = 'hidden';
-                    
-                    // Add click handler
-                    button.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        
-                        console.log('Hamburger menu clicked');
-                        
-                        // Toggle dropdown visibility
-                        const isOpen = dropdown.classList.contains('block-header-layout-mobile__dropdown--open');
-                        
-                        if (isOpen) {
-                            // Close menu
-                            dropdown.classList.remove('block-header-layout-mobile__dropdown--open');
-                            dropdown.style.display = 'none';
-                            dropdown.style.visibility = 'hidden';
-                            dropdown.style.opacity = '0';
-                            dropdown.style.height = '0';
-                            dropdown.style.maxHeight = '0';
-                            dropdown.style.overflow = 'hidden';
-                        } else {
-                            // Open menu
-                            dropdown.classList.add('block-header-layout-mobile__dropdown--open');
-                            dropdown.style.display = 'flex';
-                            dropdown.style.visibility = 'visible';
-                            dropdown.style.opacity = '1';
-                            dropdown.style.height = 'auto';
-                            dropdown.style.maxHeight = 'none';
-                            dropdown.style.overflow = 'visible';
-                        }
-                    });
+            // Show mobile navigation as regular visible menu
+            const mobileDropdowns = document.querySelectorAll('.block-header-layout-mobile__dropdown');
+            mobileDropdowns.forEach(function(dropdown) {
+                if (dropdown) {
+                    dropdown.style.display = 'block';
+                    dropdown.style.visibility = 'visible';
+                    dropdown.style.opacity = '1';
+                    dropdown.style.height = 'auto';
+                    dropdown.style.maxHeight = 'none';
+                    dropdown.style.overflow = 'visible';
+                    dropdown.style.position = 'static';
+                    dropdown.style.background = 'transparent';
+                }
+            });
+            
+            // Ensure navigation links are visible and properly styled
+            const navLinks = document.querySelectorAll('.block-header__nav-links');
+            navLinks.forEach(function(nav) {
+                if (nav) {
+                    nav.style.display = 'flex';
+                    nav.style.flexDirection = 'row';
+                    nav.style.justifyContent = 'center';
+                    nav.style.alignItems = 'center';
+                    nav.style.gap = '20px';
+                    nav.style.flexWrap = 'wrap';
+                }
+            });
+            
+            // Style navigation items
+            const navItems = document.querySelectorAll('.block-header-item .item-content');
+            navItems.forEach(function(item) {
+                if (item) {
+                    item.style.display = 'block';
+                    item.style.visibility = 'visible';
+                    item.style.color = '#fff';
+                    item.style.textDecoration = 'none';
+                    item.style.padding = '8px 12px';
+                    item.style.fontSize = '16px';
+                    item.style.whiteSpace = 'nowrap';
                 }
             });
         }

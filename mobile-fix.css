@@ -12,65 +12,109 @@
   }
 }
 
-/* 2. Hamburger menu visibility fixes for mobile */
+/* 2. Two-line mobile navigation layout - NO hamburger menu */
 @media screen and (max-width: 920px) {
-  /* Show hamburger menu button */
+  /* Hide hamburger menu completely */
   .burger.block-header__hamburger-menu {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    z-index: 999 !important;
-    position: relative !important;
-  }
-  
-  .burger__bun,
-  .burger__meat {
-    display: block !important;
-    visibility: visible !important;
-    background-color: #fff !important;
-    height: 2px !important;
-    width: 20px !important;
-    margin: 3px 0 !important;
-  }
-  
-  /* HIDE mobile dropdown by default */
-  .block-header-layout-mobile__dropdown {
     display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    max-height: 0 !important;
-    height: 0 !important;
-    overflow: hidden !important;
   }
   
-  /* SHOW mobile dropdown only when opened */
-  .block-header-layout-mobile__dropdown--open {
-    display: flex !important;
+  /* Show mobile dropdown as regular navigation */
+  .block-header-layout-mobile__dropdown {
+    display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
     max-height: none !important;
     height: auto !important;
     overflow: visible !important;
+    position: static !important;
+    background: transparent !important;
+    padding: 10px 0 !important;
   }
   
-  /* Navigation items styling when menu is open */
-  .block-header-layout-mobile__dropdown--open .block-header__nav-links {
+  /* Two-line layout for mobile header */
+  .block-header-layout-mobile {
+    display: grid !important;
+    grid-template-rows: auto auto !important;
+    grid-template-columns: 1fr auto auto !important;
+    grid-template-areas: 
+      "logo contact hello"
+      "nav nav nav" !important;
+    gap: 10px !important;
+    padding: 10px 16px !important;
+  }
+  
+  /* Position elements in grid */
+  .block-header__logo {
+    grid-area: logo !important;
+    justify-self: start !important;
+  }
+  
+  /* Contact link positioning */
+  .block-header-item:has([href*="contact"]) {
+    grid-area: contact !important;
+    justify-self: end !important;
+  }
+  
+  /* Hello I'm Q button positioning */
+  .block-header__button {
+    grid-area: hello !important;
+    justify-self: end !important;
+    margin-left: 10px !important;
+  }
+  
+  /* Navigation on second line */
+  .block-header-layout-mobile__dropdown {
+    grid-area: nav !important;
+  }
+  
+  /* Horizontal navigation layout */
+  .block-header__nav-links {
     display: flex !important;
-    flex-direction: column !important;
-    visibility: visible !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    flex-wrap: wrap !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
   
-  .block-header-layout-mobile__dropdown--open .block-header-item {
+  /* Navigation items styling */
+  .block-header-item {
     display: block !important;
     visibility: visible !important;
+    margin: 0 !important;
   }
   
-  .block-header-layout-mobile__dropdown--open .item-content {
+  .item-content {
     display: block !important;
     visibility: visible !important;
     color: #fff !important;
     text-decoration: none !important;
-    padding: 10px !important;
+    padding: 8px 12px !important;
+    font-size: 16px !important;
+    white-space: nowrap !important;
+  }
+  
+  /* Dropdown menus for About and Case Studies */
+  .block-header-item__dropdown {
+    position: static !important;
+    display: block !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    margin-top: 5px !important;
+  }
+  
+  .block-header-item__dropdown .block-header-item {
+    display: inline-block !important;
+    margin-right: 15px !important;
+  }
+  
+  .block-header-item__dropdown .item-content {
+    font-size: 14px !important;
+    padding: 5px 8px !important;
+    opacity: 0.9 !important;
   }
 }
 
@@ -145,12 +189,19 @@
     display: none !important;
   }
   
-  /* Hide menu by default, show hamburger */
-  .block-header-layout-mobile__dropdown {
+  .no-js .block-header__nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 20px !important;
+  }
+  
+  /* Always hide hamburger menu, always show navigation */
+  .burger.block-header__hamburger-menu {
     display: none !important;
   }
   
-  .burger.block-header__hamburger-menu {
+  .block-header-layout-mobile__dropdown {
     display: block !important;
   }
 }
