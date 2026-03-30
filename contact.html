@@ -1038,4 +1038,138 @@
 
 })();
 </script>
+<script>
+// CLEANUP SCATTERED MENU ITEMS - Remove all visible navigation elements
+(function() {
+    'use strict';
+
+    function cleanupScatteredMenus() {
+        if (window.innerWidth <= 920) {
+            console.log('Cleaning up scattered menu items...');
+
+            // Hide all navigation-related elements that might be visible
+            const elementsToHide = [
+                '.block-header:not(#custom-mobile-nav)',
+                '.site-header:not(#custom-mobile-nav)',
+                'header:not(#custom-mobile-nav)',
+                '.navigation:not(#custom-mobile-nav)',
+                '.nav:not(#custom-mobile-nav)',
+                '.menu:not(#custom-mobile-nav)',
+                '.block-header-layout-mobile:not(#custom-mobile-nav)',
+                '.block-header-layout-mobile__dropdown:not(#custom-mobile-nav)',
+                '.block-header__nav-links:not(#custom-mobile-nav)',
+                '.block-header-item:not(#custom-mobile-nav)',
+                '.block-header__nav:not(#custom-mobile-nav)',
+                'nav:not(#custom-mobile-nav)',
+                '[data-qa*="navigation"]:not(#custom-mobile-nav)',
+                '[data-qa*="nav"]:not(#custom-mobile-nav)',
+                '[data-qa*="menu"]:not(#custom-mobile-nav)',
+                '[data-qa*="header"]:not(#custom-mobile-nav)'
+            ];
+
+            // Hide elements by selector
+            elementsToHide.forEach(selector => {
+                try {
+                    const elements = document.querySelectorAll(selector);
+                    elements.forEach(element => {
+                        // Skip our custom navigation
+                        if (element.id === 'custom-mobile-nav' || element.id === 'mobile-dropdown') {
+                            return;
+                        }
+
+                        // Skip if element is inside our custom navigation
+                        if (element.closest('#custom-mobile-nav') || element.closest('#mobile-dropdown')) {
+                            return;
+                        }
+
+                        element.style.display = 'none !important';
+                        element.style.visibility = 'hidden !important';
+                        element.style.opacity = '0 !important';
+                        element.style.height = '0 !important';
+                        element.style.overflow = 'hidden !important';
+                    });
+                } catch (e) {
+                    // Ignore selector errors
+                }
+            });
+
+            // Find and hide scattered navigation links by text content
+            const allElements = document.querySelectorAll('*');
+            allElements.forEach(element => {
+                // Skip our custom navigation
+                if (element.id === 'custom-mobile-nav' || element.id === 'mobile-dropdown') {
+                    return;
+                }
+
+                // Skip if element is inside our custom navigation
+                if (element.closest('#custom-mobile-nav') || element.closest('#mobile-dropdown')) {
+                    return;
+                }
+
+                // Check if element contains navigation text
+                const text = element.textContent?.trim();
+                if (text && (
+                    text === 'Home' || 
+                    text === 'About' || 
+                    text === 'Case Studies' || 
+                    text === 'Contact' || 
+                    text === "Hello I'm Q"
+                )) {
+                    // Check if it's a navigation element
+                    if (element.tagName === 'A' || 
+                        element.getAttribute('href') ||
+                        element.closest('a') ||
+                        element.closest('nav') ||
+                        element.closest('.nav') ||
+                        element.closest('.menu') ||
+                        element.closest('.navigation') ||
+                        element.closest('.block-header')) {
+
+                        // Hide the element and its parent containers
+                        let currentElement = element;
+                        for (let i = 0; i < 5; i++) {
+                            if (currentElement && 
+                                currentElement.id !== 'custom-mobile-nav' && 
+                                currentElement.id !== 'mobile-dropdown' &&
+                                !currentElement.closest('#custom-mobile-nav') &&
+                                !currentElement.closest('#mobile-dropdown')) {
+
+                                currentElement.style.display = 'none !important';
+                                currentElement.style.visibility = 'hidden !important';
+                                currentElement.style.opacity = '0 !important';
+                                currentElement.style.height = '0 !important';
+                                currentElement.style.overflow = 'hidden !important';
+                            }
+                            currentElement = currentElement.parentElement;
+                        }
+                    }
+                }
+            });
+
+            console.log('✅ Scattered menu items cleaned up');
+        }
+    }
+
+    // Run cleanup function multiple times
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', cleanupScatteredMenus);
+    } else {
+        cleanupScatteredMenus();
+    }
+
+    // Run multiple times to catch dynamic content
+    setTimeout(cleanupScatteredMenus, 100);
+    setTimeout(cleanupScatteredMenus, 500);
+    setTimeout(cleanupScatteredMenus, 1000);
+    setTimeout(cleanupScatteredMenus, 2000);
+    setTimeout(cleanupScatteredMenus, 3000);
+    setTimeout(cleanupScatteredMenus, 5000);
+
+    // Run on resize and framework events
+    window.addEventListener('resize', cleanupScatteredMenus);
+    window.addEventListener('astro:load', cleanupScatteredMenus);
+    window.addEventListener('astro:after-swap', cleanupScatteredMenus);
+
+})();
+</script>
 </body></html>
