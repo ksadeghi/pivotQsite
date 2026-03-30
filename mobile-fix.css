@@ -1,0 +1,221 @@
+/* Mobile Safari Compatibility Fixes */
+
+/* 1. iOS Safari viewport fixes */
+@supports (-webkit-touch-callout: none) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* 2. Simple mobile navigation - show only main items */
+@media screen and (max-width: 920px) {
+  /* Hide hamburger menu completely */
+  .burger.block-header__hamburger-menu {
+    display: none !important;
+  }
+  
+  /* Force mobile header to be simple two-line layout */
+  .block-header {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 10px 16px !important;
+  }
+  
+  /* First line: Logo, Contact, Hello I'm Q */
+  .block-header-layout-mobile {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .block-header__logo {
+    flex: 0 0 auto !important;
+  }
+  
+  .block-header__button {
+    flex: 0 0 auto !important;
+    margin-left: 10px !important;
+  }
+  
+  /* Second line: Simple horizontal navigation */
+  .block-header-layout-mobile__dropdown {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  /* Show only main navigation items horizontally */
+  .block-header__nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 30px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+  
+  /* Show only main navigation items (Home, About, Case Studies, Contact) */
+  .block-header__nav-links > .block-header-item {
+    display: block !important;
+    visibility: visible !important;
+    margin: 0 !important;
+  }
+  
+  /* Hide all dropdown/submenu items */
+  .block-header-item__dropdown,
+  .block-header-item__dropdown-area {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+  
+  /* Style main navigation links */
+  .block-header__nav-links > .block-header-item > .item-content-wrapper > .item-content,
+  .block-header__nav-links > .block-header-item > .item-content {
+    display: block !important;
+    visibility: visible !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 8px 12px !important;
+    font-size: 16px !important;
+    white-space: nowrap !important;
+    background: transparent !important;
+    border: none !important;
+  }
+  
+  /* Hide dropdown arrows */
+  .item-content__icon-container,
+  .item-content__icon-container-wrapper {
+    display: none !important;
+  }
+  
+  /* Ensure Contact link is visible in top row */
+  .block-header-item[data-qa*="contact"] {
+    order: 999 !important;
+  }
+}
+
+/* 3. Force elements to be visible on mobile */
+@media screen and (max-width: 920px) {
+  .layout-element {
+    display: grid !important;
+    visibility: visible !important;
+  }
+  
+  .layout-element--layout {
+    display: grid !important;
+  }
+  
+  /* Ensure text elements are visible */
+  .text-box,
+  .grid-text-box {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  /* Ensure images are visible */
+  .image-wrapper,
+  .grid-image {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  /* Ensure buttons are visible */
+  .grid-button {
+    display: flex !important;
+    visibility: visible !important;
+  }
+}
+
+/* 4. iOS Safari specific fixes */
+@media screen and (max-width: 920px) {
+  /* Fix for iOS Safari 100vh issues */
+  .block-header-layout-mobile__dropdown--full-screen {
+    height: calc(100vh - 60px) !important;
+    min-height: calc(100vh - 60px) !important;
+  }
+  
+  /* Ensure proper touch targets */
+  button,
+  a,
+  .item-content {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    touch-action: manipulation !important;
+  }
+  
+  /* Fix for iOS Safari font rendering */
+  * {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
+}
+
+/* 5. Fallback styles for when JavaScript fails */
+@media screen and (max-width: 920px) {
+  .no-js .block-header-layout-mobile__dropdown {
+    display: block !important;
+    position: static !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  .no-js .burger.block-header__hamburger-menu {
+    display: none !important;
+  }
+  
+  .no-js .block-header__nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 20px !important;
+  }
+  
+  /* Always hide hamburger menu, always show navigation */
+  .burger.block-header__hamburger-menu {
+    display: none !important;
+  }
+  
+  .block-header-layout-mobile__dropdown {
+    display: block !important;
+  }
+}
+
+/* 6. Force visibility for critical elements */
+@media screen and (max-width: 920px) {
+  [data-v-06cc56f8],
+  [data-v-c1535ecd],
+  [data-v-f7e431f3],
+  [data-v-76d5a5f3] {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  .block-header {
+    display: grid !important;
+    visibility: visible !important;
+  }
+  
+  .block-header__nav {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
