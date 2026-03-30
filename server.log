@@ -167,3 +167,162 @@ Serving HTTP on 0.0.0.0 port 53219 (http://0.0.0.0:53219/) ...
 127.0.0.1 - - [30/Mar/2026 05:28:10] "GET /_astro-1774731881460/Integrations.CYU5sdbN.js HTTP/1.1" 404 -
 127.0.0.1 - - [30/Mar/2026 05:28:10] code 404, message File not found
 127.0.0.1 - - [30/Mar/2026 05:28:10] "GET /_astro-1774731881460/Page.BWEBtFMk.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /_astro-1774731881460/ClientHead.BHwaDjFH.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /_astro-1774731881460/client.BCjasqoC.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-W7UPAHR4.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-ROG2Z67P.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-E5P5FVIW.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-KMCRHZNH.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-N4SLXUGN.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-MRDOZWGK.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-IH4X2UOT.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-JTCGJ5GI.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-KRI7MVRE.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-OLS7ZE5V.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-TBSIZWO5.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /_astro-1774731881460/Integrations.CYU5sdbN.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:05] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:05] "GET /_astro-1774731881460/Page.BWEBtFMk.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /about.html HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/images/pivotiq_howwework_bg_sf_2560x1440_hq_pure-JWzSOedY4gMlICqQ.webp HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /_astro-1774731881460/ClientHead.BHwaDjFH.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /_astro-1774731881460/client.BCjasqoC.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-MRDOZWGK.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-W7UPAHR4.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-N4SLXUGN.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-ROG2Z67P.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-KMCRHZNH.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-E5P5FVIW.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-IH4X2UOT.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-TBSIZWO5.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-JTCGJ5GI.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-KRI7MVRE.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-OLS7ZE5V.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /_astro-1774731881460/Integrations.CYU5sdbN.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/images/elegant-red-q-on-transparent-background-tXQYFFcfwic7uV9B.avif HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/images/pivotiq_headshot_graybg_realistic_headroom-6s7YNhmwPGhSTW8s.avif HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /assets/images/pivotiq_bio_businesscasual_graybg_headroom_full-rgYdWt2_002.avif HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2026 05:35:46] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:35:46] "GET /_astro-1774731881460/Page.BWEBtFMk.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /_astro-1774731881460/ClientHead.BHwaDjFH.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /_astro-1774731881460/client.BCjasqoC.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-KMCRHZNH.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-E5P5FVIW.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-N4SLXUGN.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-W7UPAHR4.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-MRDOZWGK.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-ROG2Z67P.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-IH4X2UOT.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-OLS7ZE5V.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-TBSIZWO5.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-KRI7MVRE.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-JTCGJ5GI.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /_astro-1774731881460/Integrations.CYU5sdbN.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:36:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:36:25] "GET /_astro-1774731881460/Page.BWEBtFMk.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /about.html HTTP/1.1" 304 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /_astro-1774731881460/ClientHead.BHwaDjFH.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /_astro-1774731881460/client.BCjasqoC.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-MRDOZWGK.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-N4SLXUGN.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-ROG2Z67P.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-E5P5FVIW.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-KMCRHZNH.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-W7UPAHR4.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-JTCGJ5GI.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-IH4X2UOT.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-TBSIZWO5.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-OLS7ZE5V.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-KRI7MVRE.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /_astro-1774731881460/Integrations.CYU5sdbN.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:25] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:25] "GET /_astro-1774731881460/Page.BWEBtFMk.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /_astro-1774731881460/client.BCjasqoC.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /_astro-1774731881460/ClientHead.BHwaDjFH.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-E5P5FVIW.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-N4SLXUGN.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-ROG2Z67P.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-MRDOZWGK.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-KMCRHZNH.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-W7UPAHR4.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-IH4X2UOT.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-KRI7MVRE.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-JTCGJ5GI.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-OLS7ZE5V.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /assets/js/6dde4961d28ef86467df9880c03b15ccb70e5f49-chunk-TBSIZWO5.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /_astro-1774731881460/Integrations.CYU5sdbN.js HTTP/1.1" 404 -
+127.0.0.1 - - [30/Mar/2026 05:37:48] code 404, message File not found
+127.0.0.1 - - [30/Mar/2026 05:37:48] "GET /_astro-1774731881460/Page.BWEBtFMk.js HTTP/1.1" 404 -
