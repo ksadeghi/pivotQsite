@@ -1,0 +1,136 @@
+/* Mobile Navigation Fix - Remove Hamburger Menu and Show Desktop Navigation */
+
+/* Hide hamburger menu on all screen sizes */
+.burger.block-header__hamburger-menu,
+.block-header__hamburger-menu {
+    display: none !important;
+}
+
+/* Hide mobile dropdown navigation */
+.block-header-layout-mobile__dropdown {
+    display: none !important;
+}
+
+/* Show desktop navigation on mobile */
+.block-header-layout-desktop {
+    display: flex !important;
+}
+
+/* Make desktop navigation visible and functional on mobile */
+@media (max-width: 768px) {
+    /* Force desktop navigation to be visible */
+    .block-header-layout-desktop {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    /* Make navigation links horizontal and scrollable if needed */
+    .block-header__nav {
+        display: block !important;
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .block-header__nav-links {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 5px;
+        margin: 0;
+        list-style: none;
+    }
+    
+    /* Style navigation items for mobile */
+    .block-header-item {
+        position: relative;
+        white-space: nowrap;
+    }
+    
+    /* Style navigation links */
+    .block-header-item .item-content {
+        padding: 8px 12px;
+        font-size: 14px;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+    
+    /* Dropdown styling for mobile */
+    .block-header-item__dropdown-area {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+        min-width: 200px;
+        display: none;
+    }
+    
+    .block-header-item:hover .block-header-item__dropdown-area {
+        display: block;
+    }
+    
+    .block-header-item__dropdown {
+        list-style: none;
+        margin: 0;
+        padding: 5px 0;
+    }
+    
+    .block-header-item__dropdown .block-header-item {
+        width: 100%;
+    }
+    
+    .block-header-item__dropdown .item-content {
+        display: block;
+        padding: 10px 15px;
+        color: #333;
+        text-decoration: none;
+        border-radius: 0;
+    }
+    
+    .block-header-item__dropdown .item-content:hover {
+        background-color: #f5f5f5;
+    }
+    
+    /* Hide mobile-specific elements */
+    .block-header-layout-mobile {
+        display: none !important;
+    }
+    
+    /* Ensure logo and button are still visible */
+    .block-header__logo {
+        margin-bottom: 10px;
+    }
+    
+    .block-header__button {
+        margin-top: 10px;
+        align-self: center;
+    }
+}
+
+/* For very small screens, make navigation even more compact */
+@media (max-width: 480px) {
+    .block-header__nav-links {
+        font-size: 12px;
+        gap: 5px;
+    }
+    
+    .block-header-item .item-content {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+}
+
+/* Ensure navigation is always visible and functional */
+.block-header__nav,
+.block-header__nav-links,
+.block-header-item {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
