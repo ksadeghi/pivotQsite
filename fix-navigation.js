@@ -28,69 +28,34 @@
         // Remove Vue.js astro-island elements that cause issues
         const astroIslands = document.querySelectorAll('astro-island');
         astroIslands.forEach(island => {
-            island.style.display = 'none !important';
-            island.style.visibility = 'hidden !important';
-            island.style.height = '0 !important';
-            island.style.overflow = 'hidden !important';
+            if (island.getAttribute('component-url') && island.getAttribute('component-url').includes('Header')) {
+                island.style.display = 'none';
+            }
         });
         
-        // Hide ALL complex header elements - be more aggressive
-        const complexHeaders = document.querySelectorAll('header, .block-header, [class*="block-header"], [data-qa*="header"], sectionheader');
+        // Hide ALL complex header elements
+        const complexHeaders = document.querySelectorAll('.block-header, header[class*="block"], [class*="block-header"]');
         complexHeaders.forEach(header => {
-            if (!header.classList.contains('simple-mobile-nav')) {
-                header.style.display = 'none !important';
-                header.style.visibility = 'hidden !important';
-                header.style.height = '0 !important';
-                header.style.overflow = 'hidden !important';
-                header.style.position = 'absolute !important';
-                header.style.left = '-9999px !important';
-            }
-        });
-        
-        // Remove ALL navigation elements that aren't ours
-        const allNavElements = document.querySelectorAll('nav, [class*="nav"], [data-qa*="nav"], [class*="navigation"], [data-qa*="navigation"]');
-        allNavElements.forEach(nav => {
-            if (!nav.closest('.simple-mobile-nav')) {
-                nav.style.display = 'none !important';
-                nav.style.visibility = 'hidden !important';
-                nav.style.height = '0 !important';
-                nav.style.overflow = 'hidden !important';
-            }
+            header.style.display = 'none !important';
+            header.style.visibility = 'hidden !important';
+            header.style.height = '0 !important';
+            header.style.overflow = 'hidden !important';
         });
         
         // Remove dropdown triggers and complex navigation
-        const dropdownTriggers = document.querySelectorAll('.block-header-item__mobile-dropdown-trigger, .burger, [data-qa*="hamburger"], .block-header-item__dropdown, .block-header-item__dropdown-area, [class*="dropdown"]');
+        const dropdownTriggers = document.querySelectorAll('.block-header-item__mobile-dropdown-trigger, .burger, [data-qa="builder-siteheader-btn-hamburger"], .block-header-item__dropdown, .block-header-item__dropdown-area');
         dropdownTriggers.forEach(trigger => {
             trigger.style.display = 'none !important';
             trigger.style.visibility = 'hidden !important';
         });
         
-        // Hide any remaining complex elements by class patterns
-        const complexSelectors = [
-            '[class*="block-header"]',
-            '[data-qa*="builder-siteheader"]', 
-            '[class*="header-content"]',
-            '[class*="header-layout"]',
-            '.block-header-logo',
-            '.block-header__logo',
-            '.block-header__nav',
-            '.block-header__nav-links',
-            '.block-header-item',
-            '.item-content-wrapper',
-            '.item-content',
-            'sectionheader'
-        ];
-        
-        complexSelectors.forEach(selector => {
-            const elements = document.querySelectorAll(selector);
-            elements.forEach(element => {
-                if (!element.closest('.simple-mobile-nav')) {
-                    element.style.display = 'none !important';
-                    element.style.visibility = 'hidden !important';
-                    element.style.height = '0 !important';
-                    element.style.overflow = 'hidden !important';
-                }
-            });
+        // Hide any remaining complex navigation elements
+        const complexNavElements = document.querySelectorAll('[class*="block-header"], [data-qa*="builder-siteheader"], [class*="navigation"]');
+        complexNavElements.forEach(element => {
+            if (!element.classList.contains('simple-mobile-nav')) {
+                element.style.display = 'none !important';
+                element.style.visibility = 'hidden !important';
+            }
         });
     }
     
@@ -199,10 +164,9 @@
             });
         });
         
-        // Add mobile responsive styles AND aggressive hiding of complex navigation
+        // Add mobile responsive styles
         const style = document.createElement('style');
         style.textContent = `
-            /* Mobile responsive styles */
             @media (max-width: 768px) {
                 .simple-mobile-nav div {
                     flex-direction: column !important;
@@ -216,50 +180,6 @@
                     font-size: 16px !important;
                     padding: 10px 8px !important;
                 }
-            }
-            
-            /* AGGRESSIVE HIDING of all complex navigation elements */
-            astro-island,
-            .block-header,
-            [class*="block-header"],
-            [data-qa*="header"],
-            [data-qa*="navigation"],
-            [class*="header-content"],
-            [class*="header-layout"],
-            .block-header-logo,
-            .block-header__logo,
-            .block-header__nav,
-            .block-header__nav-links,
-            .block-header-item,
-            .item-content-wrapper,
-            .item-content,
-            sectionheader,
-            [data-qa*="builder-siteheader"],
-            .burger,
-            [data-qa*="hamburger"],
-            .block-header-item__dropdown,
-            .block-header-item__dropdown-area,
-            [class*="dropdown"],
-            .block-header-item__mobile-dropdown-trigger {
-                display: none !important;
-                visibility: hidden !important;
-                height: 0 !important;
-                overflow: hidden !important;
-                position: absolute !important;
-                left: -9999px !important;
-                opacity: 0 !important;
-            }
-            
-            /* Show ONLY our simple navigation */
-            .simple-mobile-nav,
-            .simple-mobile-nav * {
-                display: flex !important;
-                visibility: visible !important;
-                height: auto !important;
-                overflow: visible !important;
-                position: relative !important;
-                left: auto !important;
-                opacity: 1 !important;
             }
         `;
         document.head.appendChild(style);
