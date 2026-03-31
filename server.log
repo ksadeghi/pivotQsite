@@ -1,0 +1,10 @@
+Serving HTTP on 0.0.0.0 port 52065 (http://0.0.0.0:52065/) ...
+127.0.0.1 - - [31/Mar/2026 02:12:53] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 02:12:53] "GET /assets/images/iac_aligned_fontmatched-YU6LUAt0upiYbHzd_006.avif HTTP/1.1" 304 -
+127.0.0.1 - - [31/Mar/2026 02:12:53] "GET /assets/images/mateenik_aligned_noredtext-EPSoy4EduEjBIs9K_010.avif HTTP/1.1" 304 -
+127.0.0.1 - - [31/Mar/2026 02:12:53] "GET /assets/images/pivotq-final-vector-oPvykR4YtqNfcxXS.svg HTTP/1.1" 304 -
+127.0.0.1 - - [31/Mar/2026 02:17:09] "GET /mobile_test.html HTTP/1.1" 200 -
+127.0.0.1 - - [31/Mar/2026 02:17:09] "GET /index.html HTTP/1.1" 304 -
+127.0.0.1 - - [31/Mar/2026 02:17:09] "GET /assets/images/pivotq-final-vector-oPvykR4YtqNfcxXS.svg HTTP/1.1" 304 -
+127.0.0.1 - - [31/Mar/2026 02:17:09] "GET /assets/images/iac_aligned_fontmatched-YU6LUAt0upiYbHzd_006.avif HTTP/1.1" 304 -
+127.0.0.1 - - [31/Mar/2026 02:17:09] "GET /assets/images/mateenik_aligned_noredtext-EPSoy4EduEjBIs9K_010.avif HTTP/1.1" 304 -
